@@ -4,7 +4,7 @@
 
 ```cmd
 REM  Force update NuGet package
-Update-Package -reinstall -Project ProjectName
+Update-Package -reinstall [PackageName] [-Project ProjectName]
 ```
 
 ## When moving projects
