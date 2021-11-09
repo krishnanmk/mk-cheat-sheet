@@ -11,4 +11,8 @@ git clean -f -X
 # --dry-run is if you only want to list them down, not actually remove them
 git remote update --prune
 git remote prune origin [--dry-run]
+
+# Delete remote branches
+git push origin --delete branch-name1 branch-name2 branch-name3 ...
+
 ```
