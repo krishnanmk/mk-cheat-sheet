@@ -24,3 +24,11 @@ Use the following command to download log files from \*nix server to your local 
 pscp [USER_NAME]@[IP_ADDRESS]:[REMOTE_PATH_OF_FILE_TO_COPY] [LOCAL_PATH_TO_DOWNLOAD_TO]
 rem After running above command, it will ask you for password.
 ```
+
+### Networking
+
+```sh
+hostname -i # Get current IP address of host machine
+curl ifconfig.co # Get public IP address of host machine
+hostname --fqdn # Get fully qualified domain name of host machine
+```
