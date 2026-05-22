@@ -72,6 +72,21 @@ public static void Main()
 }
 ```
 
+## Fluent API
+
+```cs
+// How to get a entity to map to another table name in db, in another schema
+var parentConfig = modelBuilder.Entity<EntityParent>().ToTable("TableParent", "schm");
+
+// How to ignore fields
+parentConfig.Ignore(s => s.Name).Ignore(s => s.CreatedDate);
+
+// Connect children entities
+modelBuilder.Entity<EntityChildA>().ToTable("TableChildA", "schm");
+modelBuilder.Entity<EntityChildB>().ToTable("TableChildB", "schm");
+aggregateRootConfig.HasMany(e => e.EntityParents).WithRequired(sa => sa.AggRootEntity);
+```
+
 ## References
 
 Some references from where this cheatsheet's code is inspired/prepared.
