@@ -19,4 +19,7 @@ git push origin --delete branch-name1 branch-name2 branch-name3 ...
 git reflog
 # Find the state you want to go back to, denoted by HEAD@{#}, e.g. HEAD@{3}.
 git reset --hard HEAD~3
+
+# Search commits, list only top N results, list files changed
+git log -N --grep="search term" --name-status
 ```
